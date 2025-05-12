@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 import clsx from "clsx"
 import { Link } from "react-router-dom"
+import webLogo from '../components/images/weblogo.png';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -32,7 +33,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <span className="font-bold text-xl sm:text-2xl lg:text-3xl">Weblodex</span>
+            {/* <span className="font-bold text-xl sm:text-2xl lg:text-3xl">Weblodex</span> */}
+            <img
+              src={webLogo}
+              alt="Weblodex Logo"
+              className="h-[200px] w-[300px] -ml-[30px]"
+            />
+
           </div>
 
           {/* Desktop Navigation */}
