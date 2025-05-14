@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { FiArrowRight, FiMapPin, FiPhone, FiMail, FiHeart } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import img from '../components/images/logoFooter.png'; 
 const Footer = () => {
   const [email, setEmail] = useState("");
 
@@ -34,10 +35,11 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="space-y-6 text-center sm:text-left">
             <div className="flex justify-center sm:justify-start items-center space-x-2">
-              <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
-                <span className="text-indigo-700 text-xl font-bold">W</span>
-              </div>
-              <h2 className="text-2xl font-bold">Weblodex</h2>
+              <img
+                src={img} // Replace with actual path or import
+                alt="Weblodex Logo"
+                className="w-20 h-20 object-cover"
+              />
             </div>
             <p className="text-indigo-100 max-w-xs mx-auto sm:mx-0">
               Empowering digital experiences with cutting-edge solutions. Your vision, our expertise.
