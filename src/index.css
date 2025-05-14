@@ -8,3 +8,33 @@
     transform: translateY(0);
   }
 }
+
+@keyframes ring {
+  0% { transform: rotate(0); }
+  1% { transform: rotate(15deg); }
+  3% { transform: rotate(-15deg); }
+  5% { transform: rotate(10deg); }
+  7% { transform: rotate(-10deg); }
+  9% { transform: rotate(5deg); }
+  11% { transform: rotate(-5deg); }
+  13% { transform: rotate(0); }
+  100% { transform: rotate(0); }
+}
+
+.ring-animation {
+  animation: ring 1.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+
+@keyframes customPing {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+

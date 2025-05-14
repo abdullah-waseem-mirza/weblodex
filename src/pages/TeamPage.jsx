@@ -42,7 +42,7 @@ export default function TeamPage() {
       <Team />
 
       {/* CTA Section */}
-      <section className="py-16 bg-indigo-800">
+      <section className="py-16 bg-gradient-to-b from-violet-600 to-indigo-800">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-white animate-fadeIn">
             Have an Idea in Mind or Looking to Revamp Your Existing Website?

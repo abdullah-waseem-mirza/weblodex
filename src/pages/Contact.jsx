@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import emailjs from 'emailjs-com';
+import { FaWhatsapp } from 'react-icons/fa';
+
+
 
 export default function Contact() {
   useEffect(() => {
@@ -19,11 +22,11 @@ export default function Contact() {
       console.error("Recipient email is missing");
       return;
     }
-  
+
     try {
       await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID, 
-        import.meta.env.VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID, 
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID,
         {
           to_email: recipientEmail,
           to_name: userName,
@@ -36,14 +39,14 @@ export default function Contact() {
       console.error('Error sending auto-reply:', error);
     }
   };
-  
-  
+
+
 
   // Modify handleSubmit to include auto-reply
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    
+
     try {
       // Send original email
       const result = await emailjs.sendForm(
@@ -52,13 +55,13 @@ export default function Contact() {
         e.target,
         import.meta.env.VITE_EMAILJS_USER_ID
       );
-      
+
       // Send auto-reply, passing the correct email address
       await sendAutoReply(email);
-  
+
       // console.log(result.text);
       alert('✅ Message sent successfully!');
-  
+
       // Clear form fields
       setUserName('');
       setEmail('');
@@ -71,7 +74,7 @@ export default function Contact() {
       setLoading(false);
     }
   };
-  
+
 
   return (
     <div className="relative min-h-screen flex flex-col bg-gradient-to-b from-indigo-900 to-violet-500 text-white">
@@ -179,6 +182,26 @@ export default function Contact() {
           </button>
         </form>
       </div>
+      {/* CTA Section */}
+    <section className="py-16 bg-gradient-to-b from-[#7752DC] to-indigo-800">
+  <div className="container mx-auto px-4 text-center">
+    <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-white animate-fadeIn">
+      Have a concept in mind or want a website makeover? We’re just a message away.
+    </h2>
+    <p className="text-gray-300 mb-8 animate-slideUp">We are just a Click Away!</p>
+    <a
+      href="https://wa.me/923156674654"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 bg-indigo-500 text-white px-6 py-3 rounded-md transition-all duration-300 hover:bg-indigo-600 ring-animation"
+    >
+      <FaWhatsapp className="w-5 h-5" />
+      Chat on WhatsApp
+    </a>
+  </div>
+</section>
+
+
     </div>
   );
-}
+} 

@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import placeholderImg from './images/techCompany.png';
+import { Link } from 'react-router-dom';
 
 // Register GSAP plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -118,9 +119,11 @@ const WhoWeAre = () => {
             At <span className="font-semibold text-white">Weblodex</span>, we craft cutting-edge digital experiences tailored for the modern world. We're not just another software house — we're your technology partners. Whether it's a dynamic website, a full-stack web app, or a custom software solution, we bring your vision to life with clean code, creative design, and powerful functionality.
           </p>
 
+        <Link to="/about">
           <button className="mt-6 px-6 py-3 bg-white text-indigo-700 font-semibold rounded-2xl shadow-md hover:bg-indigo-100 transition-all duration-300">
             Read More
           </button>
+          </Link>
         </div>
 
         {/* Image */}

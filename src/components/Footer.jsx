@@ -70,35 +70,36 @@ const Footer = () => {
             </div>
           </div>
 
-                <div className="text-center sm:text-left">
-                <h3 className="text-lg font-semibold mb-6 border-b border-indigo-400 pb-2">
-                  Quick Links
-                </h3>
-                <ul className="space-y-3">
-                  {[
-                  { name: "Home", path: "/" },
-                  { name: "About Us", path: "/about" },
-                  { name: "Team", path: "/team" },
-                  { name: "Services", path: "/services" },
-                  { name: "Contact Us", path: "/contact" }
-                  ].map((item) => (
-                  <li key={item.name}>
-                    <a 
-                    href={item.path}
+          <div className="text-center sm:text-left">
+            <h3 className="text-lg font-semibold mb-6 border-b border-indigo-400 pb-2">
+              Quick Links
+            </h3>
+            <ul className="space-y-3">
+              {[
+                { name: "Home", path: "/" },
+                { name: "About Us", path: "/about" },
+                { name: "Team", path: "/team" },
+                { name: "Services", path: "/services" },
+                { name: "Contact Us", path: "/contact" },
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link
+                    to={item.path}
                     className="text-indigo-100 hover:text-white flex items-center justify-center sm:justify-start group"
-                    >
+                  >
                     <FiArrowRight
                       size={14}
                       className="mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     />
                     {item.name}
-                    </a>
-                  </li>
-                  ))}
-                </ul>
-                </div>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-                {/* Contact Info */}
+
+          {/* Contact Info */}
           <div className="text-center sm:text-left">
             <h3 className="text-lg font-semibold mb-6 border-b border-indigo-400 pb-2">
               Contact Us
