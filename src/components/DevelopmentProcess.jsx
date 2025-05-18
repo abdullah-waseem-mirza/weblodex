@@ -47,21 +47,20 @@ const processSteps = [
 ];
 
 export default function DevelopmentProcess() {
-  const sectionRef = useRef(null);
   const textRef = useRef(null);
+  const cardsRef = useRef(null);
 
   useEffect(() => {
-    const el = sectionRef.current;
     gsap.fromTo(
-      el,
-      { y: 100, opacity: 0 },
+      textRef.current,
+      { x: 100, opacity: 0 },
       {
-        y: 0,
+        x: 0,
         opacity: 1,
         duration: 1,
         ease: "power3.out",
         scrollTrigger: {
-          trigger: el,
+          trigger: textRef.current,
           start: "top 85%",
           toggleActions: "play none none reverse",
         },
@@ -69,17 +68,18 @@ export default function DevelopmentProcess() {
     );
 
     gsap.fromTo(
-      textRef.current,
-      { y: 60, opacity: 0 },
+      cardsRef.current,
+      { x: 100, opacity: 0 },
       {
-        y: 0,
+        x: 0,
         opacity: 1,
-        delay: 0.3,
+        delay: 0.2,
         duration: 1,
         ease: "power3.out",
         scrollTrigger: {
-          trigger: textRef.current,
-          start: "top 90%",
+          trigger: cardsRef.current,
+          start: "top 85%",
+          toggleActions: "play none none reverse",
         },
       }
     );
@@ -87,7 +87,6 @@ export default function DevelopmentProcess() {
 
   return (
     <section
-      ref={sectionRef}
       className="overflow-hidden relative bg-gradient-to-b from-violet-600 to-indigo-800 px-4 sm:px-8 md:px-16 xl:px-24 py-20 text-white font-sans"
     >
       <div className="text-center mb-12 max-w-4xl mx-auto" ref={textRef}>
@@ -104,7 +103,10 @@ export default function DevelopmentProcess() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 xl:gap-10 mt-12">
+      <div
+        ref={cardsRef}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 xl:gap-10 mt-12"
+      >
         {processSteps.map((step, index) => (
           <div
             key={index}

@@ -121,8 +121,12 @@ export default function Contact() {
             <p className="mt-2 text-xl font-semibold text-yellow-300">weblodex@gmail.com</p>
           </div>
           <div>
-            <h3 className="text-2xl font-bold text-violet-200 mb-2">📍 Location</h3>
-            <p className="text-gray-200">232 Block G, Sabzazar Housing Scheme</p>
+            <h3 className="text-2xl font-bold text-violet-200 mb-2">🏙️ Headquater</h3>
+            <p className="text-gray-200">2548 Market St, Suite 12345, San Francisco, CA 94104, USA</p>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-violet-200 mb-2">🚩 Office</h3>
+            <p className="text-gray-200">208 B. Ahmad Yar Block, Mustafa Town, Lahore, 54000</p>
           </div>
         </div>
 

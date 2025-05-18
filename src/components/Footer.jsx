@@ -110,7 +110,7 @@ const Footer = () => {
               <li className="flex items-start justify-center sm:justify-start">
                 <FiMapPin className="mr-3 text-indigo-300 flex-shrink-0 mt-1" size={18} />
                 <span className="text-indigo-100 text-sm sm:text-base max-w-[200px]">
-                  Sabzazar, Multan Road, Lahore, Punjab
+                  548 Market St, Suite 12345, San Francisco, CA 94104, USA
                 </span>
               </li>
               <li className="flex items-center justify-center sm:justify-start">

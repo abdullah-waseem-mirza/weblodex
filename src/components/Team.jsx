@@ -49,7 +49,7 @@ export default function Team() {
     ,  
     {
       id: 4,
-      name: "Abu Baker",
+      name: "Rana Abu Baker",
       position: "QA Engineer",
       image: img4,
       description: "Ensuring the highest quality standards with thorough testing.",
